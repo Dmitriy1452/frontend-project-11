@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <div class="main">
         <h1>RSS агрегатор</h1>
-        <div class="description">
-            <p>Начните читать RSS сегодня! Это легко, это красиво.</p>
-        </div>
-        <form>
+        <p class="subtitle">Начните читать RSS сегодня! Это легко, это красиво.</p>
+        <form class="form-group">
             <label name="RSS-link">
                 <input type="text" name="RSS-link" placeholder="Ссылка RSS">
             </label>
@@ -20,6 +19,6 @@
             </button>
         </form>
         <div class="example">Пример: https://lorem-rss.hexlet.app/feed</div>
-    </header>
+    </div>
 </body>
 </html>
