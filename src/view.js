@@ -1,5 +1,5 @@
 import * as yup from 'yup'
-import { proxy, subscribe, snapshot } from 'valtio/vanilla'
+import { proxy } from 'valtio/vanilla'
 
 const state = proxy({
     url: '',
@@ -27,14 +27,13 @@ const validate = (data) => {
 
 const updateUI = (value, input, messageField) => {
     messageField.textcontent = ''
-    
     return validate(value)
         .then(() => {
             input.style.border = ''
             messageField.textContent = state.message
             messageField.style.color = 'green'
         })
-        .catch(error => {
+        .catch(() => {
             input.style.border = '1.5px solid red'
             messageField.textContent = state.error
             messageField.style.color = 'red'
